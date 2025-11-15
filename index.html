@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Moradi.xyz</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f7f7f7;
+      color: #222;
+    }
+
+    header {
+      background: black;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 10px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 15px;
+    }
+
+    .hero {
+      padding: 80px 20px;
+      text-align: center;
+      background: white;
+    }
+
+    .hero h1 {
+      font-size: 48px;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      font-size: 20px;
+      color: #555;
+      max-width: 600px;
+      margin: auto;
+    }
+
+    .section {
+      padding: 60px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+      margin-top: 30px;
+    }
+
+    .project-card {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    .project-card h3 {
+      margin-top: 0;
+      margin-bottom: 10px;
+    }
+
+    footer {
+      margin-top: 50px;
+      padding: 40px;
+      text-align: center;
+      background: black;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <h2>Moradi.xyz</h2>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <h1>Welcome to My Website</h1>
+    <p>Your clean, simple, and fast website running on GitHub Pages.</p>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section" id="about">
+    <h2>About Me</h2>
+    <p>
+      Hi, I’m Aaron — but online people call me Simba.  
+      I’m a developer, student, and creator building cool things on the internet.
+    </p>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="section" id="projects">
+    <h2>Projects</h2>
+
+    <div class="projects-grid">
+      <div class="project-card">
+        <h3>Project 1</h3>
+        <p>A quick description of project #1.</p>
+      </div>
+
+      <div class="project-card">
+        <h3>Project 2</h3>
+        <p>A quick description of project #2.</p>
+      </div>
+
+      <div class="project-card">
+        <h3>Project 3</h3>
+        <p>A quick description of project #3.</p>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section" id="contact">
+    <h2>Contact</h2>
+    <p>Email me anytime: <strong>aaronmoradi2@gmail.com</strong></p>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 Moradi.xyz</p>
+  </footer>
+
+  <!-- Live Check One-Liner -->
+  <script>console.log("✔️ moradi.xyz is live");</script>
+
+</body>
+</html>
