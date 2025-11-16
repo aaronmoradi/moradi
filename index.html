@@ -2,190 +2,200 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Moradi Family</title>
+  <title>Moradi Nexus</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta
     name="description"
-    content="A simple, modern home for the Moradi family."
+    content="A futuristic hub that showcases the Moradi Nexus."
   />
   <link rel="stylesheet" href="styles.css" />
 </head>
-<body>
+<body data-theme="dark">
+  <!-- Background grid / glow -->
+  <div class="bg-grid"></div>
+
+  <!-- Toast for easter eggs -->
+  <div id="toast" class="toast"></div>
+
   <!-- Header -->
   <header class="site-header">
     <div class="wrap header-inner">
       <div class="logo" id="logo">
-        <span class="logo-mark">M</span>
-        <span class="logo-text">Moradi Family</span>
+        <span class="logo-mark">◎</span>
+        <span class="logo-text">Moradi<span>.nexus</span></span>
       </div>
       <nav class="nav">
-        <a href="#home">Home</a>
-        <a href="#family">Family</a>
-        <a href="#contact">Contact</a>
+        <a href="#hero">Home</a>
+        <a href="#systems">Systems</a>
+        <a href="#timeline">Timeline</a>
       </nav>
+      <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">
+        Light Mode
+      </button>
     </div>
   </header>
 
-  <main id="home">
+  <main>
     <!-- Hero Section -->
-    <section class="hero">
+    <section id="hero" class="hero">
       <div class="wrap hero-inner">
-        <div class="hero-text">
-          <h1>Welcome to the Moradi Family</h1>
-          <p>
-            A clean, modern home online to highlight the people who matter
-            most. Scroll sideways below to meet each member of our family.
+        <div class="hero-copy">
+          <p class="eyebrow">MORADI CONTROL INTERFACE // v1.0</p>
+          <h1 id="heroTitle" class="hero-title">
+            Welcome to the<br /><span>Moradi Nexus</span>
+          </h1>
+          <p class="hero-subtitle">
+            A futuristic space to introduce who we are, what we build, and
+            where we’re going next.
           </p>
-          <a href="#family" class="btn-primary">Meet the Family</a>
+          <div class="hero-actions">
+            <a href="#systems" class="btn btn-primary">Enter the system</a>
+            <a href="#timeline" class="btn btn-ghost">View activity log</a>
+          </div>
+          <p class="hero-meta">
+            Status: <span class="status-pill status-online">ONLINE</span>
+            <span class="hero-meta-hint">Tap, scroll, and press keys. The system reacts.</span>
+          </p>
+        </div>
+
+        <div class="hero-panel">
+          <div class="orbital">
+            <div class="orbital-core"></div>
+            <div class="orbit orbit-1"></div>
+            <div class="orbit orbit-2"></div>
+            <div class="orbit orbit-3"></div>
+          </div>
+          <div class="hero-panel-metrics">
+            <div class="metric">
+              <span>Signal</span>
+              <div class="bar bar-1"></div>
+            </div>
+            <div class="metric">
+              <span>Connections</span>
+              <div class="bar bar-2"></div>
+            </div>
+            <div class="metric">
+              <span>Sync</span>
+              <div class="bar bar-3"></div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Secret banner (shows in party mode) -->
-    <div class="secret-banner" id="secretBanner">
-      🎉 Party mode activated – thanks for finding the easter egg. 🎉
-    </div>
-
-    <!-- Family Section -->
-    <section id="family" class="family-section">
+    <!-- Systems Section -->
+    <section id="systems" class="systems">
       <div class="wrap">
-        <header class="section-header">
-          <h2>Our Family</h2>
+        <div class="section-header">
+          <h2>Active Systems</h2>
           <p>
-            All on one line. Swipe or scroll horizontally on mobile to see
-            everyone.
+            Modules that power the Moradi Nexus. Hover, tap, or focus to explore.
           </p>
-        </header>
-
-        <div class="family-row">
-          <!-- Family Member 1 -->
-          <article class="family-card">
-            <div class="family-photo">
-              <!-- Replace with your own image -->
-              <img src="https://via.placeholder.com/400x260" alt="Family Member 1" />
-            </div>
-            <div class="family-content">
-              <h3>Family Member 1</h3>
-              <p class="role">Role / Relationship (e.g., Dad)</p>
-              <p class="bio">
-                Short highlight paragraph about this person. Their work,
-                hobbies, or what makes them special.
-              </p>
-              <div class="tags">
-                <span>Leader</span>
-                <span>Inspiration</span>
-              </div>
-              <div class="links">
-                <a href="#" target="_blank" rel="noopener">View More</a>
-              </div>
-            </div>
-          </article>
-
-          <!-- Family Member 2 -->
-          <article class="family-card">
-            <div class="family-photo">
-              <img src="https://via.placeholder.com/400x260" alt="Family Member 2" />
-            </div>
-            <div class="family-content">
-              <h3>Family Member 2</h3>
-              <p class="role">Role / Relationship (e.g., Mom)</p>
-              <p class="bio">
-                Use this space to share their story, career, or personality in a
-                warm, simple way.
-              </p>
-              <div class="tags">
-                <span>Creative</span>
-                <span>Heart of the Home</span>
-              </div>
-              <div class="links">
-                <a href="#" target="_blank" rel="noopener">View More</a>
-              </div>
-            </div>
-          </article>
-
-          <!-- Family Member 3 -->
-          <article class="family-card">
-            <div class="family-photo">
-              <img src="https://via.placeholder.com/400x260" alt="Family Member 3" />
-            </div>
-            <div class="family-content">
-              <h3>Family Member 3</h3>
-              <p class="role">Role / Relationship</p>
-              <p class="bio">
-                A short, clean description highlighting their interests, studies,
-                or achievements.
-              </p>
-              <div class="tags">
-                <span>Curious</span>
-                <span>Builder</span>
-              </div>
-              <div class="links">
-                <a href="#" target="_blank" rel="noopener">View More</a>
-              </div>
-            </div>
-          </article>
-
-          <!-- Family Member 4 -->
-          <article class="family-card">
-            <div class="family-photo">
-              <img src="https://via.placeholder.com/400x260" alt="Family Member 4" />
-            </div>
-            <div class="family-content">
-              <h3>Family Member 4</h3>
-              <p class="role">Role / Relationship</p>
-              <p class="bio">
-                Another dedicated space to show off who they are and what they’re
-                into.
-              </p>
-              <div class="tags">
-                <span>Sporty</span>
-                <span>Driven</span>
-              </div>
-              <div class="links">
-                <a href="#" target="_blank" rel="noopener">View More</a>
-              </div>
-            </div>
-          </article>
-
-          <!-- Family Member 5 -->
-          <article class="family-card">
-            <div class="family-photo">
-              <img src="https://via.placeholder.com/400x260" alt="Family Member 5" />
-            </div>
-            <div class="family-content">
-              <h3>Family Member 5</h3>
-              <p class="role">Role / Relationship</p>
-              <p class="bio">
-                Final spotlight section. You can make this as detailed or as
-                minimal as you want.
-              </p>
-              <div class="tags">
-                <span>Adventurous</span>
-                <span>Kind</span>
-              </div>
-              <div class="links">
-                <a href="#" target="_blank" rel="noopener">View More</a>
-              </div>
-            </div>
-          </article>
         </div>
 
-        <p class="scroll-hint">
-          Tip: On mobile, swipe left/right. On desktop, shift + scroll or drag horizontally.
-        </p>
+        <div class="system-grid">
+          <article class="system-card">
+            <h3>Family Core</h3>
+            <p>
+              Central identity module. Stores stories, values, and memories that
+              define who we are.
+            </p>
+            <ul>
+              <li>Profiles &amp; highlights</li>
+              <li>Shared milestones</li>
+              <li>Private memory bank</li>
+            </ul>
+          </article>
+
+          <article class="system-card">
+            <h3>Projects Node</h3>
+            <p>
+              Experiments, careers, and side quests. Everything we’re building
+              gets routed through here.
+            </p>
+            <ul>
+              <li>Live and archived work</li>
+              <li>Learning in public</li>
+              <li>Ideas staging area</li>
+            </ul>
+          </article>
+
+          <article class="system-card">
+            <h3>Future Scan</h3>
+            <p>
+              A forward-looking radar. Tracks goals, travel, and what’s next
+              for the Moradi network.
+            </p>
+            <ul>
+              <li>Upcoming missions</li>
+              <li>Places to go</li>
+              <li>Skills to unlock</li>
+            </ul>
+          </article>
+        </div>
       </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact-section">
-      <div class="wrap contact-inner">
-        <h2>Get in Touch</h2>
+    <!-- Timeline / Activity Log -->
+    <section id="timeline" class="timeline">
+      <div class="wrap">
+        <div class="section-header">
+          <h2>Activity Log</h2>
+          <p>
+            A quick snapshot of recent or imagined log entries from the Nexus.
+          </p>
+        </div>
+
+        <div class="timeline-feed">
+          <article class="log">
+            <span class="log-time">2025-03-01 10:24</span>
+            <h3>Node handshake complete</h3>
+            <p>
+              Primary Moradi Nexus brought online. Visual layer initialized with
+              adaptive light / dark interface.
+            </p>
+          </article>
+
+          <article class="log">
+            <span class="log-time">2025-03-02 21:03</span>
+            <h3>Family cluster synced</h3>
+            <p>
+              Core family profiles linked. Emotional bandwidth dramatically
+              increased. Signal strength: excellent.
+            </p>
+          </article>
+
+          <article class="log">
+            <span class="log-time">2025-03-03 14:11</span>
+            <h3>Exploration protocol engaged</h3>
+            <p>
+              Travel and future goals pinned to the radar. System now listening
+              for new adventures.
+            </p>
+          </article>
+
+          <article class="log">
+            <span class="log-time">2025-03-04 00:42</span>
+            <h3>Human input detected</h3>
+            <p>
+              User interaction increased. Interface secretly unlocked additional
+              visual modes. Keep experimenting.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta">
+      <div class="wrap cta-inner">
+        <h2>Connect with the Nexus</h2>
         <p>
-          Want to connect with the Moradi family? Reach out any time.
+          This space will evolve over time. For now, it’s a quiet signal that
+          we’re online, learning, and building.
         </p>
-        <!-- Replace the email with yours -->
-        <a href="mailto:hello@moradi.xyz" class="btn-secondary">
-          Email Us
+        <a href="mailto:hello@moradi.xyz" class="btn btn-primary">
+          Send a transmission
         </a>
       </div>
     </section>
@@ -194,65 +204,117 @@
   <!-- Footer -->
   <footer class="site-footer">
     <div class="wrap footer-inner">
-      <p>© <span id="year"></span> Moradi Family. All rights reserved.</p>
+      <p>
+        © <span id="year"></span> Moradi Nexus. All rights reserved.
+        <span class="footer-hint">
+          Hint: logos, titles, and your keyboard may do more than you expect.
+        </span>
+      </p>
     </div>
   </footer>
 
   <script>
-    // Keep the year updated
-    document.getElementById("year").textContent = new Date().getFullYear();
+    // === Year ===
+    const yearSpan = document.getElementById("year");
+    yearSpan.textContent = new Date().getFullYear();
 
-    // Easter egg #1: Logo click party mode
-    (function () {
-      const logo = document.getElementById("logo");
-      const secretBanner = document.getElementById("secretBanner");
-      let clickCount = 0;
-      let clickTimeout;
+    // === Theme toggle (light / dark with localStorage) ===
+    const body = document.body;
+    const themeToggle = document.getElementById("themeToggle");
+    const savedTheme = localStorage.getItem("theme");
 
-      logo.addEventListener("click", () => {
+    if (savedTheme === "light" || savedTheme === "dark") {
+      body.setAttribute("data-theme", savedTheme);
+    }
+
+    function updateThemeToggleLabel() {
+      const current = body.getAttribute("data-theme");
+      themeToggle.textContent = current === "dark" ? "Light Mode" : "Dark Mode";
+    }
+
+    updateThemeToggleLabel();
+
+    themeToggle.addEventListener("click", () => {
+      const current = body.getAttribute("data-theme");
+      const next = current === "dark" ? "light" : "dark";
+      body.setAttribute("data-theme", next);
+      localStorage.setItem("theme", next);
+      updateThemeToggleLabel();
+      showToast(`${next === "dark" ? "Dark" : "Light"} mode engaged.`);
+    });
+
+    // === Toast helper for easter eggs ===
+    const toast = document.getElementById("toast");
+    let toastTimeout;
+
+    function showToast(message) {
+      toast.textContent = message;
+      toast.classList.add("show");
+      if (toastTimeout) clearTimeout(toastTimeout);
+      toastTimeout = setTimeout(() => {
+        toast.classList.remove("show");
+      }, 2600);
+    }
+
+    // === Easter Egg 1: triple-click hero title => glitch mode ===
+    const heroTitle = document.getElementById("heroTitle");
+    let lastClickTime = 0;
+    let clickCount = 0;
+
+    heroTitle.addEventListener("click", () => {
+      const now = Date.now();
+      if (now - lastClickTime < 500) {
         clickCount++;
-        if (clickTimeout) clearTimeout(clickTimeout);
-        clickTimeout = setTimeout(() => {
-          clickCount = 0;
-        }, 600);
+      } else {
+        clickCount = 1;
+      }
+      lastClickTime = now;
 
-        if (clickCount >= 5) {
-          document.body.classList.toggle("party-mode");
-          secretBanner.classList.toggle("show");
-          clickCount = 0;
+      if (clickCount >= 3) {
+        body.classList.toggle("glitch-mode");
+        showToast("Glitch mode toggled.");
+        clickCount = 0;
+      }
+    });
+
+    // === Easter Egg 2: logo multi-click => pulse mode ===
+    const logo = document.getElementById("logo");
+    let logoClickCount = 0;
+    let logoTimeout;
+
+    logo.addEventListener("click", () => {
+      logoClickCount++;
+      if (logoTimeout) clearTimeout(logoTimeout);
+      logoTimeout = setTimeout(() => {
+        if (logoClickCount >= 4) {
+          body.classList.toggle("pulse-mode");
+          showToast("Pulse mode activated.");
         }
-      });
-    })();
+        logoClickCount = 0;
+      }, 600);
+    });
 
-    // Easter egg #2: Konami code to trigger party mode as well
-    (function () {
-      const secretBanner = document.getElementById("secretBanner");
-      const konami = [
-        "ArrowUp",
-        "ArrowUp",
-        "ArrowDown",
-        "ArrowDown",
-        "ArrowLeft",
-        "ArrowRight",
-        "ArrowLeft",
-        "ArrowRight",
-        "b",
-        "a",
-      ];
-      let buffer = [];
+    // === Easter Egg 3: secret key sequence "NEON" => neon mode ===
+    const secretSequence = ["n", "e", "o", "n"];
+    let keyBuffer = [];
 
-      window.addEventListener("keydown", (e) => {
-        buffer.push(e.key);
-        if (buffer.length > konami.length) {
-          buffer.shift();
-        }
+    window.addEventListener("keydown", (event) => {
+      const key = event.key.toLowerCase();
+      keyBuffer.push(key);
+      if (keyBuffer.length > secretSequence.length) {
+        keyBuffer.shift();
+      }
 
-        if (JSON.stringify(buffer) === JSON.stringify(konami)) {
-          document.body.classList.add("party-mode");
-          secretBanner.classList.add("show");
-        }
-      });
-    })();
+      const isMatch = secretSequence.every(
+        (k, i) => keyBuffer[i] === k
+      );
+
+      if (isMatch) {
+        body.classList.toggle("neon-mode");
+        showToast("Neon protocol unlocked.");
+        keyBuffer = [];
+      }
+    });
   </script>
 </body>
 </html>
