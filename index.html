@@ -14,7 +14,7 @@
   <!-- Header -->
   <header class="site-header">
     <div class="wrap header-inner">
-      <div class="logo">
+      <div class="logo" id="logo">
         <span class="logo-mark">M</span>
         <span class="logo-text">Moradi Family</span>
       </div>
@@ -33,13 +33,18 @@
         <div class="hero-text">
           <h1>Welcome to the Moradi Family</h1>
           <p>
-            A simple corner of the internet to highlight the people who matter
-            most. Scroll down to meet each member of our family.
+            A clean, modern home online to highlight the people who matter
+            most. Scroll sideways below to meet each member of our family.
           </p>
           <a href="#family" class="btn-primary">Meet the Family</a>
         </div>
       </div>
     </section>
+
+    <!-- Secret banner (shows in party mode) -->
+    <div class="secret-banner" id="secretBanner">
+      🎉 Party mode activated – thanks for finding the easter egg. 🎉
+    </div>
 
     <!-- Family Section -->
     <section id="family" class="family-section">
@@ -47,12 +52,12 @@
         <header class="section-header">
           <h2>Our Family</h2>
           <p>
-            Each card below is a dedicated space to promote and celebrate
-            a member of the Moradi family.
+            All on one line. Swipe or scroll horizontally on mobile to see
+            everyone.
           </p>
         </header>
 
-        <div class="family-grid">
+        <div class="family-row">
           <!-- Family Member 1 -->
           <article class="family-card">
             <div class="family-photo">
@@ -67,11 +72,10 @@
                 hobbies, or what makes them special.
               </p>
               <div class="tags">
-                <span>Highlight 1</span>
-                <span>Highlight 2</span>
+                <span>Leader</span>
+                <span>Inspiration</span>
               </div>
               <div class="links">
-                <!-- Replace # with actual links (LinkedIn, portfolio, etc.) -->
                 <a href="#" target="_blank" rel="noopener">View More</a>
               </div>
             </div>
@@ -91,7 +95,7 @@
               </p>
               <div class="tags">
                 <span>Creative</span>
-                <span>Family Leader</span>
+                <span>Heart of the Home</span>
               </div>
               <div class="links">
                 <a href="#" target="_blank" rel="noopener">View More</a>
@@ -112,7 +116,7 @@
                 or achievements.
               </p>
               <div class="tags">
-                <span>Student</span>
+                <span>Curious</span>
                 <span>Builder</span>
               </div>
               <div class="links">
@@ -135,7 +139,7 @@
               </p>
               <div class="tags">
                 <span>Sporty</span>
-                <span>Curious</span>
+                <span>Driven</span>
               </div>
               <div class="links">
                 <a href="#" target="_blank" rel="noopener">View More</a>
@@ -165,6 +169,10 @@
             </div>
           </article>
         </div>
+
+        <p class="scroll-hint">
+          Tip: On mobile, swipe left/right. On desktop, shift + scroll or drag horizontally.
+        </p>
       </div>
     </section>
 
@@ -191,8 +199,60 @@
   </footer>
 
   <script>
-    // Simple script to keep the year updated
+    // Keep the year updated
     document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Easter egg #1: Logo click party mode
+    (function () {
+      const logo = document.getElementById("logo");
+      const secretBanner = document.getElementById("secretBanner");
+      let clickCount = 0;
+      let clickTimeout;
+
+      logo.addEventListener("click", () => {
+        clickCount++;
+        if (clickTimeout) clearTimeout(clickTimeout);
+        clickTimeout = setTimeout(() => {
+          clickCount = 0;
+        }, 600);
+
+        if (clickCount >= 5) {
+          document.body.classList.toggle("party-mode");
+          secretBanner.classList.toggle("show");
+          clickCount = 0;
+        }
+      });
+    })();
+
+    // Easter egg #2: Konami code to trigger party mode as well
+    (function () {
+      const secretBanner = document.getElementById("secretBanner");
+      const konami = [
+        "ArrowUp",
+        "ArrowUp",
+        "ArrowDown",
+        "ArrowDown",
+        "ArrowLeft",
+        "ArrowRight",
+        "ArrowLeft",
+        "ArrowRight",
+        "b",
+        "a",
+      ];
+      let buffer = [];
+
+      window.addEventListener("keydown", (e) => {
+        buffer.push(e.key);
+        if (buffer.length > konami.length) {
+          buffer.shift();
+        }
+
+        if (JSON.stringify(buffer) === JSON.stringify(konami)) {
+          document.body.classList.add("party-mode");
+          secretBanner.classList.add("show");
+        }
+      });
+    })();
   </script>
 </body>
 </html>
