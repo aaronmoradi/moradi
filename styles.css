@@ -15,17 +15,19 @@
 }
 
 body.theme-light {
-  --bg: #f9fafb;
-  --bg-alt: #eef2ff;
-  --fg: #020617;
-  --muted: #4b5563;
-  --accent: #6366f1;
-  --accent-soft: rgba(99, 102, 241, 0.08);
-  --accent-2: #ec4899;
-  --card-bg: rgba(255, 255, 255, 0.9);
-  --border-subtle: rgba(148, 163, 184, 0.4);
-  --shadow-soft: 0 16px 35px rgba(15, 23, 42, 0.12);
+  /* Softer, slightly darker light palette for easier reading */
+  --bg: #e5e7eb;            /* base background */
+  --bg-alt: #d4d4d8;        /* subtle alt background */
+  --fg: #020617;            /* main text */
+  --muted: #374151;         /* muted text, still readable */
+  --accent: #2563eb;        /* calmer blue accent */
+  --accent-soft: rgba(37, 99, 235, 0.09);
+  --accent-2: #db2777;      /* secondary accent */
+  --card-bg: rgba(248, 250, 252, 0.96); /* card background less bright */
+  --border-subtle: rgba(148, 163, 184, 0.6);
+  --shadow-soft: 0 14px 28px rgba(15, 23, 42, 0.22);
 }
+
 
 /* Lakers / Dodgers flash modes */
 body.lakers-mode {
@@ -97,6 +99,8 @@ body {
   display: flex;
   align-items: center;
   gap: 8px;
+  text-decoration: none;
+  color: inherit;
 }
 
 .logo-mark {
@@ -166,9 +170,10 @@ body {
 /* LAYOUT / SECTIONS */
 
 .snap-container {
-  scroll-snap-type: y mandatory;
-  height: 100vh;
-  overflow-y: auto;
+  /* No snap, just a normal scrolling wrapper */
+  /* scroll-snap-type: y mandatory; */
+  /* height: 100vh; */
+  /* overflow-y: auto; */
   scroll-behavior: smooth;
 }
 
@@ -178,10 +183,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.section-snap {
-  scroll-snap-align: start;
 }
 
 .section-inner {
