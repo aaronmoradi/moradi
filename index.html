@@ -2,73 +2,445 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Moradi Family Directory</title>
+  <title>Moradi.xyz • Aaron Moradi</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    name="description"
+    content="Moradi.xyz – a neon, playful portal for Aaron Moradi: portfolio, projects, life timeline, and contact."
+  />
   <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap"
+  />
 </head>
-<body>
+<body class="theme-dark">
+  <div class="bg-noise"></div>
+
+  <!-- Floating header -->
   <header class="site-header">
-    <h1>Meet the Moradi Family</h1>
-    <p>Welcome to moradi.xyz — a digital card for each of us.</p>
-    <button id="toggle-theme">Toggle Light/Dark</button>
+    <div class="logo">
+      <span class="logo-mark">⊹</span>
+      <span class="logo-text">moradi<span>.xyz</span></span>
+    </div>
+
+    <nav class="nav">
+      <button class="nav-link" data-target="#hero">Home</button>
+      <button class="nav-link" data-target="#about">About</button>
+      <button class="nav-link" data-target="#projects">Projects</button>
+      <button class="nav-link" data-target="#life">Life</button>
+      <button class="nav-link" data-target="#contact">Contact</button>
+    </nav>
+
+    <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">
+      ☾
+    </button>
   </header>
 
-  <main class="cards-container">
-    <!-- Repeat for each family member -->
-    <section class="profile-card fade-in">
-      <img src="https://via.placeholder.com/100" alt="Person 1" class="profile-pic" />
-      <h2>Leila Moradi</h2>
-      <p>Attorney • Advocate • Mom</p>
-      <div class="links">
-        <a href="#">LinkedIn</a>
-        <a href="#">Email</a>
-        <a href="#">Website</a>
+  <main class="snap-container">
+    <!-- HERO -->
+    <section id="hero" class="section hero section-snap">
+      <div class="hero-inner">
+        <div class="hero-orb"></div>
+        <div class="hero-content">
+          <p class="hero-kicker">Hello, internet.</p>
+          <h1 class="hero-title">
+            I’m <span class="hero-name">Aaron&nbsp;Moradi</span>
+          </h1>
+          <p class="hero-sub">
+            Computer Science graduate • Assistant Chief of Staff at XYZ •
+            Lakers &amp; Dodgers fan.
+          </p>
+          <p class="hero-pill">
+            Professional · Creative · Determined · Personable
+          </p>
+
+          <div class="hero-actions">
+            <a href="#projects" class="btn primary">View projects</a>
+            <a href="#contact" class="btn ghost">Say hi</a>
+          </div>
+
+          <div class="hero-meta">
+            <span>Based in Los Angeles, CA</span>
+            <span>Always keeping a soft spot for Syracuse, NY</span>
+          </div>
+        </div>
+
+        <div class="hero-avatar-card">
+          <div class="avatar-ring">
+            <!-- Replace src with your actual portrait path -->
+            <img
+              src="assets/aaron.jpg"
+              alt="Portrait of Aaron Moradi"
+              class="avatar-img"
+            />
+          </div>
+          <p class="avatar-caption">
+            “Go Lakers. Go Dodgers.” – every good day
+          </p>
+        </div>
       </div>
     </section>
 
-    <section class="profile-card fade-in">
-      <img src="https://via.placeholder.com/100" alt="Person 2" class="profile-pic" />
-      <h2>David Moradi</h2>
-      <p>Investor • Entrepreneur • Dad</p>
-      <div class="links">
-        <a href="#">LinkedIn</a>
-        <a href="#">Email</a>
-        <a href="#">Twitter</a>
+    <!-- ABOUT -->
+    <section id="about" class="section section-snap">
+      <div class="section-inner">
+        <header class="section-header">
+          <p class="section-tag">Who’s behind moradi.xyz?</p>
+          <h2>About Aaron</h2>
+        </header>
+
+        <div class="about-grid">
+          <div class="card about-card">
+            <h3>Snapshot</h3>
+            <p>
+              I’m a Computer Science graduate from Syracuse University and work
+              as Assistant Chief of Staff at XYZ. I love building
+              impact-driven products and supporting people who rely on them.
+            </p>
+            <p>
+              Outside of tech, I’m usually playing or watching basketball,
+              listening to music, or staring at art for longer than necessary.
+            </p>
+            <p>
+              Born and raised in Los Angeles, California – but Syracuse, New
+              York will always have its own spot in my heart.
+            </p>
+          </div>
+
+          <div class="card about-card">
+            <h3>Programming languages</h3>
+            <ul class="pill-list">
+              <li>Python</li>
+              <li>C</li>
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>Java</li>
+              <li>JavaScript</li>
+              <li>Racket</li>
+              <li>Haskell</li>
+            </ul>
+          </div>
+
+          <div class="card about-card">
+            <h3>Quick stats</h3>
+            <ul class="stat-list">
+              <li><span>Degree</span><span>B.S. Computer Science</span></li>
+              <li><span>Minor</span><span>Eng. &amp; CS Management</span></li>
+              <li><span>Honors</span><span>Cum Laude</span></li>
+            </ul>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section class="profile-card fade-in">
-      <img src="https://via.placeholder.com/100" alt="Person 3" class="profile-pic" />
-      <h2>Aaron Moradi</h2>
-      <p>Software Engineer • Builder</p>
-      <div class="links">
-        <a href="#">GitHub</a>
-        <a href="#">LinkedIn</a>
-        <a href="#">Portfolio</a>
+    <!-- PROJECTS -->
+    <section id="projects" class="section section-snap">
+      <div class="section-inner">
+        <header class="section-header">
+          <p class="section-tag">Stuff I’ve built & analyzed</p>
+          <h2>Projects</h2>
+        </header>
+
+        <div class="project-tabs">
+          <button class="project-tab active" data-filter="all">All</button>
+          <button class="project-tab" data-filter="website">Website</button>
+          <button class="project-tab" data-filter="data">Data</button>
+          <button class="project-tab" data-filter="encryption">Encryption</button>
+        </div>
+
+        <div class="projects-grid">
+          <!-- My Website -->
+          <article
+            class="card project-card"
+            data-type="website all"
+          >
+            <div class="project-chip">Website</div>
+            <h3>My Website</h3>
+            <p>
+              Designed and coded a personal site to share who I am, showcase my
+              work, and support networking opportunities.
+            </p>
+            <p class="project-stack">HTML · CSS · JavaScript</p>
+            <div class="project-links">
+              <a href="https://www.aaronmoradi.com" target="_blank" rel="noreferrer"
+                >Live site</a
+              >
+              <a
+                href="https://github.com/aaronmoradi/aaronmoradi.github.io"
+                target="_blank"
+                rel="noreferrer"
+                >GitHub</a
+              >
+            </div>
+          </article>
+
+          <!-- Data Mining Project -->
+          <article
+            class="card project-card"
+            data-type="data all"
+          >
+            <div class="project-chip">Data</div>
+            <h3>Data Mining Project</h3>
+            <p>
+              Comparative sentiment analysis of X (Twitter) and Bluesky,
+              exploring how conversations differ across platforms.
+            </p>
+            <p class="project-stack">Python · Data</p>
+            <div class="project-links">
+              <!-- Replace with your real presentation link if needed -->
+              <a href="https://docs.google.com" target="_blank" rel="noreferrer"
+                >Presentation</a
+              >
+              <a
+                href="https://github.com"
+                target="_blank"
+                rel="noreferrer"
+                >GitHub</a
+              >
+            </div>
+          </article>
+
+          <!-- Encryption Project -->
+          <article
+            class="card project-card"
+            data-type="encryption all"
+          >
+            <div class="project-chip">Encryption</div>
+            <h3>Encryption Project</h3>
+            <p>
+              A system that reads a text file, compresses it into binary, and
+              then decrypts it back to the original content.
+            </p>
+            <p class="project-stack">Python · Collaboration</p>
+            <div class="project-links">
+              <a
+                href="https://github.com"
+                target="_blank"
+                rel="noreferrer"
+                >GitHub</a
+              >
+            </div>
+          </article>
+        </div>
       </div>
     </section>
 
-    <section class="profile-card fade-in">
-      <img src="https://via.placeholder.com/100" alt="Person 4" class="profile-pic" />
-      <h2>Emma Moradi</h2>
-      <p>Creative Director • Designer</p>
-      <div class="links">
-        <a href="#">Instagram</a>
-        <a href="#">Email</a>
+    <!-- LIFE -->
+    <section id="life" class="section section-snap">
+      <div class="section-inner">
+        <header class="section-header">
+          <p class="section-tag">Timeline mode: on</p>
+          <h2>Life, experience & credentials</h2>
+        </header>
+
+        <div class="life-layout">
+          <!-- Education -->
+          <div class="card life-card">
+            <h3>Education</h3>
+            <ol class="timeline">
+              <li>
+                <h4>
+                  Syracuse University – College of Engineering &amp; Computer Science
+                </h4>
+                <p>May 2025</p>
+                <p>Bachelor of Science, Computer Science</p>
+                <p>Minor in Engineering &amp; Computer Science Management</p>
+                <p>Cum Laude</p>
+              </li>
+            </ol>
+          </div>
+
+          <!-- Experience -->
+          <div class="card life-card">
+            <h3>Experience</h3>
+            <ol class="timeline">
+              <li>
+                <h4>Assistant Chief of Staff, XYZ</h4>
+                <p>Santa Monica, CA</p>
+                <p>October 2025 – Present</p>
+              </li>
+              <li>
+                <h4>Data Science Analyst Intern, PlanetArt</h4>
+                <p>Calabasas, CA</p>
+                <p>June 2024 – August 2024</p>
+              </li>
+              <li>
+                <h4>
+                  Panel Member, Engineering &amp; Computer Science Dean’s Advisory Panel
+                </h4>
+                <p>Syracuse, NY</p>
+                <p>May 2022 – May 2025</p>
+              </li>
+              <li>
+                <h4>Guest Services, Barnes Center at The Arch</h4>
+                <p>Syracuse, NY</p>
+                <p>August 2022 – May 2025</p>
+              </li>
+            </ol>
+          </div>
+
+          <!-- Skills & certs -->
+          <div class="card life-card">
+            <h3>Skills & certifications</h3>
+            <div class="life-subgrid">
+              <div>
+                <h4>Programming</h4>
+                <ul class="simple-list">
+                  <li>Python</li>
+                  <li>C</li>
+                  <li>HTML</li>
+                  <li>Java</li>
+                  <li>CSS</li>
+                  <li>JavaScript</li>
+                </ul>
+              </div>
+              <div>
+                <h4>Certifications</h4>
+                <ul class="simple-list">
+                  <li>Inside LVMH</li>
+                  <li>ServSafe Food Handler</li>
+                  <li>Adult First Aid/CPR/AED (Red Cross)</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section class="profile-card fade-in">
-      <img src="https://via.placeholder.com/100" alt="Person 5" class="profile-pic" />
-      <h2>Michael Moradi</h2>
-      <p>Student • Gamer • Dreamer</p>
-      <div class="links">
-        <a href="#">Twitch</a>
-        <a href="#">Discord</a>
+    <!-- CONTACT -->
+    <section id="contact" class="section section-snap">
+      <div class="section-inner">
+        <header class="section-header">
+          <p class="section-tag">Let’s talk</p>
+          <h2>Contact</h2>
+        </header>
+
+        <div class="contact-grid">
+          <div class="card contact-card">
+            <h3>Reach out</h3>
+            <p>Best way to get in touch:</p>
+            <p>
+              <strong>Email:</strong>
+              <a href="mailto:aaronmoradi2@gmail.com">aaronmoradi2@gmail.com</a>
+            </p>
+            <p>
+              <strong>LinkedIn:</strong>
+              <a
+                href="https://www.linkedin.com/in/aaronmoradi"
+                target="_blank"
+                rel="noreferrer"
+                >linkedin.com/in/aaronmoradi</a
+              >
+            </p>
+            <p>
+              Or use the contact form – your message will be sent through your
+              email client.
+            </p>
+          </div>
+
+          <div class="card contact-card">
+            <h3>Send a message</h3>
+            <form
+              class="contact-form"
+              action="mailto:aaronmoradi2@gmail.com"
+              method="post"
+              enctype="text/plain"
+            >
+              <label>
+                Full name
+                <input type="text" name="name" required />
+              </label>
+              <label>
+                Email address
+                <input type="email" name="email" required />
+              </label>
+              <label>
+                Message
+                <textarea name="message" rows="4" required></textarea>
+              </label>
+              <button type="submit" class="btn primary">Send</button>
+            </form>
+          </div>
+        </div>
+
+        <footer class="site-footer">
+          <p>
+            © <span id="year"></span> Aaron Moradi ·
+            <a href="#hero">Back to top</a>
+          </p>
+          <p class="footer-easter-egg">
+            Type <kbd>L</kbd> or <kbd>D</kbd> on your keyboard 😉
+          </p>
+        </footer>
       </div>
     </section>
   </main>
 
-  <script src="script.js"></script>
+  <script>
+    // Smooth scroll nav buttons
+    document.querySelectorAll(".nav-link").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const target = btn.getAttribute("data-target");
+        const el = document.querySelector(target);
+        if (el) {
+          el.scrollIntoView({ behavior: "smooth" });
+        }
+      });
+    });
+
+    // Theme toggle
+    const themeToggle = document.getElementById("themeToggle");
+    const body = document.body;
+
+    function setTheme(isDark) {
+      body.classList.toggle("theme-dark", isDark);
+      body.classList.toggle("theme-light", !isDark);
+      themeToggle.textContent = isDark ? "☾" : "☼";
+    }
+
+    themeToggle.addEventListener("click", () => {
+      const isDark = !body.classList.contains("theme-dark");
+      setTheme(isDark);
+    });
+
+    // Year in footer
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Simple "easter egg" – press L or D
+    window.addEventListener("keydown", (e) => {
+      if (e.key.toLowerCase() === "l") {
+        document.body.classList.add("lakers-mode");
+        setTimeout(() => document.body.classList.remove("lakers-mode"), 1200);
+      }
+      if (e.key.toLowerCase() === "d") {
+        document.body.classList.add("dodgers-mode");
+        setTimeout(() => document.body.classList.remove("dodgers-mode"), 1200);
+      }
+    });
+
+    // Project filter buttons
+    const projectTabs = document.querySelectorAll(".project-tab");
+    const projectCards = document.querySelectorAll(".project-card");
+
+    projectTabs.forEach((tab) => {
+      tab.addEventListener("click", () => {
+        const filter = tab.getAttribute("data-filter");
+        projectTabs.forEach((t) => t.classList.remove("active"));
+        tab.classList.add("active");
+
+        projectCards.forEach((card) => {
+          const types = card.getAttribute("data-type").split(" ");
+          if (types.includes(filter) || filter === "all") {
+            card.style.display = "flex";
+          } else {
+            card.style.display = "none";
+          }
+        });
+      });
+    });
+  </script>
 </body>
 </html>
